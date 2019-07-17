@@ -14,7 +14,7 @@
             <span style="color: blue;">UI</span>-->
             <div class="text-center navbar-brand-wrapper d-flex align-items-top">
               <a class="navbar-brand brand-logo" style>
-                <img style="    width: 157px;" src="..\assets\images.png" alt="logo" />
+                <img style="width: 157px;" src="..\assets\images.png" alt="logo" />
               </a>
               <!-- <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"></a> -->
             </div>
