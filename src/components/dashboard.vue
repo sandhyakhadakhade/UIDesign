@@ -10,8 +10,14 @@
       <div>
         <v-toolbar class="margin1" prominent extended>
           <v-toolbar-title style="font-size: 29px;">
-            <v-icon class="btn-icon" large style="color:blue">screen_share</v-icon>Liberty
-            <span style="color: blue;">UI</span>
+            <!-- <v-icon class="btn-icon" large style="color:blue">screen_share</v-icon>Liberty
+            <span style="color: blue;">UI</span>-->
+            <div class="text-center navbar-brand-wrapper d-flex align-items-top">
+              <a class="navbar-brand brand-logo" style>
+                <img style="    width: 157px;" src="..\assets\images.png" alt="logo" />
+              </a>
+              <!-- <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"></a> -->
+            </div>
           </v-toolbar-title>
           <v-spacer></v-spacer>
           <v-spacer></v-spacer>
@@ -32,7 +38,7 @@
               <span>4</span>
             </template>
             <v-avatar>
-              <v-icon style="font-size: 23px; color: black;" small dark>notifications</v-icon>
+              <v-icon style="font-size: 23px; color: black;" flat small dark>notifications</v-icon>
             </v-avatar>
           </v-badge>
           <v-avatar>
@@ -45,7 +51,7 @@
           <!-- extension slot -->
           <template v-slot:extension>
             <v-layout
-              style="margin-bottom: 20px;"
+              style="    margin-bottom: 15px; "
               align-start
               justify-start
               justify-space-between
@@ -53,38 +59,38 @@
               wrap
             >
               <v-flex d-flex xs4 sm3 md2>
-                <v-btn style="background: #464de4;height: 36px;" flat small>
+                <v-btn class="dashboard" flat small>
                   <v-icon class="btn-icon" flat small color="#fff">desktop_mac</v-icon>&nbsp;&nbsp;
                   <span class="text">Dashboard</span>
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
-                <v-btn style="height: 36px;" flat small>
+                <v-btn class="btn2" flat small>
                   <v-icon class="btn-icon" flat small color="indigo">widgets</v-icon>&nbsp;&nbsp;Widgets
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
-                <v-btn style="height: 36px;" flat small>
+                <v-btn class="btn2" flat small>
                   <v-icon class="btn-icon" flat small color="indigo">toys</v-icon>&nbsp;&nbsp;UI element
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
-                <v-btn style="height: 36px;" flat small>
+                <v-btn class="btn2" flat small>
                   <v-icon class="btn-icon" flat small color="indigo">pages</v-icon>&nbsp;&nbsp;pages
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
-                <v-btn style="height: 36px;" flat small>
+                <v-btn class="btn2" flat small>
                   <v-icon class="btn-icon" flat small color="indigo">format_clear</v-icon>&nbsp;&nbsp;Forms
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
-                <v-btn style="height: 36px;" flat small>
+                <v-btn class="btn2" flat small>
                   <v-icon class="btn-icon" flat small color="indigo darken-5">star</v-icon>&nbsp;&nbsp;Apps
                 </v-btn>
               </v-flex>
@@ -606,6 +612,25 @@ export default {
 </script>
 
 <style>
+.dashboard {
+  background: linear-gradient(30deg, #464de4, #814eff);
+  color: #fff;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 46px;
+  width: 16.66%;
+  text-align: center;
+  border-radius: 0px;
+}
+.btn2 {
+  color: #fff;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 46px;
+  width: 16.66%;
+  text-align: center;
+  border-radius: 0px;
+}
 .v-toolbar__extension {
   height: auto !important;
 }
@@ -620,6 +645,10 @@ export default {
 
 .theme--dark.v-card {
   box-shadow: none !important;
+}
+
+.card .card-body {
+  padding: 35px 25px;
 }
 
 .v-stepper--vertical .v-stepper__content {
@@ -851,6 +880,8 @@ button.btn.btn-labeled {
 .text {
   font-size: 1em;
   color: #fff;
+  text-shadow: none;
+  font-weight: initial;
 }
 .button-list {
   display: flex;
@@ -916,16 +947,12 @@ button.btn.btn-labeled {
 }
 
 nav.margin1.v-toolbar.v-toolbar--extended.v-toolbar--prominent.theme--light {
-    box-shadow: none;
+  box-shadow: none;
 }
 .theme--light.v-toolbar {
-    background-color: #fff;
-    color: rgba(0,0,0,0.87);
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
 }
-
-
-
-
 
 @media (min-width: 576px) {
   .v-toolbar__content,
@@ -954,8 +981,8 @@ nav.margin1.v-toolbar.v-toolbar--extended.v-toolbar--prominent.theme--light {
   }
 }
 @media screen and (min-width: 1200px) {
-  .v-toolbar__content{
-        max-width: 1127px;
+  .v-toolbar__content {
+    max-width: 1127px;
   }
   .v-toolbar__extension {
     max-width: 1140px;

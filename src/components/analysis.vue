@@ -10,8 +10,12 @@
                   class="d-flex align-items-center justify-content-center flex-column flex-sm-row"
                 >
                   <!-- <i class="mdi mdi-account-multiple-outline text-primary mr-0 mr-sm-4 icon-lg" ></i> -->
+                 <i class="mdi mdi-account-multiple-outline text-primary mr-0 mr-sm-4 icon-lg"></i>
+                 
+                 
+                 
                   <img
-                    class="text-primary mr-0"
+                    class="text-primary mr-0  mr-sm-4 "
                     style="fill: #ff0000; width: 40px;height: 40px;"
                     src="../assets/user.svg"
                   />
@@ -35,7 +39,7 @@
                             class="mdi mdi-checkbox-marked-circle-outline text-primary mr-0 mr-sm-4 icon-lg"
                   ></i>-->
                   <img
-                    class="text-primary mr-0 "
+                    class="text-primary mr-0"
                     style="color :#3f51b5;width: 40px; height: 40px;"
                     src="../assets/outline-check.svg"
                   />
@@ -152,7 +156,7 @@ export default {};
 } */
 
 .card .card-body {
-  padding: 35px 25px;
+  padding: 43px 25px;
 }
 .card-body {
   flex: 1 1 auto;
@@ -236,8 +240,21 @@ p {
   border-right: 1px solid #d5dcec;
   /* border-bottom: 1px solid #d5dcec; */
 }
+@media (min-width: 576px) {
+  .mr-sm-4,
+  .mx-sm-4 {
+    margin-right: 1.5rem !important;
+  }
+}
 
-@media (max-width: 600px) {
+@media (min-width: 576px) {
+  .mr-sm-4,
+  .mx-sm-4 {
+    margin-right: 1.5rem !important;
+  }
+}
+
+@media (max-width: 750px) {
   .card-statistics .card-col[data-v-945f9e28] {
     /* border-right: 1px solid #d5dcec; */
     border-bottom: 1px solid #d5dcec;
