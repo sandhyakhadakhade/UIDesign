@@ -9,13 +9,12 @@
                 <div
                   class="d-flex align-items-center justify-content-center flex-column flex-sm-row"
                 >
+                <!-- <AccountMultipleOutlineIcon  fillColor="#FF0000" /> -->
+                <!-- <i class="mdi mdi-account-multiple-outline text-primary mr-0 mr-sm-4 icon-lg"></i> -->
                   <!-- <i class="mdi mdi-account-multiple-outline text-primary mr-0 mr-sm-4 icon-lg" ></i> -->
-                 <i class="mdi mdi-account-multiple-outline text-primary mr-0 mr-sm-4 icon-lg"></i>
-                 
-                 
-                 
+                  <!-- <i class="mdi mdi-account-multiple-outline text-primary mr-0 mr-sm-4 icon-lg"></i> -->
                   <img
-                    class="text-primary mr-0  mr-sm-4 "
+                    class="text-primary"
                     style="fill: #ff0000; width: 40px;height: 40px;"
                     src="../assets/user.svg"
                   />
@@ -39,7 +38,7 @@
                             class="mdi mdi-checkbox-marked-circle-outline text-primary mr-0 mr-sm-4 icon-lg"
                   ></i>-->
                   <img
-                    class="text-primary mr-0"
+                    class="text-primary"
                     style="color :#3f51b5;width: 40px; height: 40px;"
                     src="../assets/outline-check.svg"
                   />
@@ -58,8 +57,8 @@
                   class="d-flex align-items-center justify-content-center flex-column flex-sm-row"
                 >
                   <img
-                    style="width: 40px;height: 40px;"
-                    class="text-primary mr-0"
+                    style="width: 40px; height:40px ;"
+                    class="text-primary"
                     src="../assets/emp.svg"
                   />
                   <!-- <i class="mdi mdi-trophy-outline text-primary mr-0 mr-sm-4 icon-lg"></i> -->
@@ -79,7 +78,7 @@
                 >
                   <img
                     style="width: 40px;height: 40px;"
-                    class="text-primary mr-0"
+                    class="text-primary"
                     src="../assets/location_searching.svg"
                   />
                   <!-- <i class="mdi mdi-target text-primary mr-0 mr-sm-4 icon-lg"></i> -->
@@ -100,7 +99,16 @@
 </template>
 
 <script>
-export default {};
+import AccountMultipleOutlineIcon from "vue-material-design-icons/AccountMultipleOutline.vue";
+
+export default {
+
+  components: {
+ 
+    AccountMultipleOutlineIcon
+  }
+
+};
 </script>
 <style scoped>
 /* first table */
@@ -118,7 +126,7 @@ export default {};
   max-width: 100%;
 }
 .icon-lg {
-  font-size: 2.5rem;
+  font-size: 2.5rem !important;
 }
 .text-primary {
   color: #464de4 !important;
@@ -128,6 +136,10 @@ export default {};
   .mr-sm-4,
   .mx-sm-4 {
     margin-right: 1.5rem !important;
+  }
+
+  .card .card-body[data-v-945f9e28] {
+    padding: 42px 6px;
   }
 }
 

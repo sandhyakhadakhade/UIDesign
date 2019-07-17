@@ -24,6 +24,15 @@
           <v-spacer></v-spacer>
 
           <!-- search content  #1976d2-->
+          <!-- <div class="form-group mb-0">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <v-icon small>search</v-icon>
+              </div>
+              <input style="border:none" type="text" class="form-control" />
+            </div>
+          </div>-->
+
           <v-btn class="btn-icon" round flat>
             <form class="form-inline md-form form-sm mt-0">
               <i class="fas fa-search" aria-hidden="true"></i>
@@ -38,7 +47,7 @@
               <span>4</span>
             </template>
             <v-avatar>
-              <v-icon style="font-size: 23px; color: black;" flat small dark>notifications</v-icon>
+              <v-icon flat small style="font-size: 23px; color: black;">notifications</v-icon>
             </v-avatar>
           </v-badge>
           <v-avatar>
@@ -51,7 +60,7 @@
           <!-- extension slot -->
           <template v-slot:extension>
             <v-layout
-              style="    margin-bottom: 15px; "
+              style=" background: #f9f9fc;   margin-bottom: 15px; "
               align-start
               justify-start
               justify-space-between
@@ -60,6 +69,8 @@
             >
               <v-flex d-flex xs4 sm3 md2>
                 <v-btn class="dashboard" flat small>
+                  <!-- <i class="mdi mdi-account-multiple-outline text-primary mr-0 mr-sm-4 icon-lg" ></i> -->
+                  <account-multiple-outline />
                   <v-icon class="btn-icon" flat small color="#fff">desktop_mac</v-icon>&nbsp;&nbsp;
                   <span class="text">Dashboard</span>
                 </v-btn>
@@ -67,31 +78,37 @@
 
               <v-flex d-flex xs4 sm3 md2>
                 <v-btn class="btn2" flat small>
-                  <v-icon class="btn-icon" flat small color="indigo">widgets</v-icon>&nbsp;&nbsp;Widgets
+                  <i class="link-icon mdi mdi-apple-safari"></i>
+                  <v-icon class="btn-icon" flat small color="indigo">widgets</v-icon>&nbsp;&nbsp;
+                  <span style="    color: #223C61;">Widgets</span>
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
                 <v-btn class="btn2" flat small>
-                  <v-icon class="btn-icon" flat small color="indigo">toys</v-icon>&nbsp;&nbsp;UI element
+                  <v-icon class="btn-icon" flat small color="indigo">toys</v-icon>&nbsp;&nbsp;
+                  <span style="color: #223C61;">UI element</span>
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
                 <v-btn class="btn2" flat small>
-                  <v-icon class="btn-icon" flat small color="indigo">pages</v-icon>&nbsp;&nbsp;pages
+                  <v-icon class="btn-icon" flat small color="indigo">pages</v-icon>&nbsp;&nbsp;
+                  <span style="color: #223C61;">pages</span>
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
                 <v-btn class="btn2" flat small>
-                  <v-icon class="btn-icon" flat small color="indigo">format_clear</v-icon>&nbsp;&nbsp;Forms
+                  <v-icon class="btn-icon" flat small color="indigo">format_clear</v-icon>&nbsp;&nbsp;
+                  <span style="color: #223C61;">Forms</span>
                 </v-btn>
               </v-flex>
 
               <v-flex d-flex xs4 sm3 md2>
                 <v-btn class="btn2" flat small>
-                  <v-icon class="btn-icon" flat small color="indigo darken-5">star</v-icon>&nbsp;&nbsp;Apps
+                  <v-icon class="btn-icon" flat small color="indigo darken-5">star</v-icon>&nbsp;&nbsp;
+                  <span style="color: #223C61;">Apps</span>
                 </v-btn>
               </v-flex>
             </v-layout>
@@ -104,18 +121,23 @@
             <!--user analysis -->
             <analysis></analysis>
 
-            <v-layout align-start justify-space-around row wrap>
+            <v-layout align-center justify-space-around row wrap>
               <!-- first card lg3 -->
-              <v-flex xs12 sm12 md4>
+              <v-flex xs12 sm12 md4 style="
+    padding-left: 12.5px;">
                 <v-card class="product-card" dark color="#fff">
-                  <div class="profile">
+                  <div class="profile card-body">
                     <div>
                       <v-avatar>
-                        <img src="../assets/Marian Jhonson.jpeg" />
+                        <img style="width: 92px; height: 92px;" src="../assets/Marian Jhonson.jpeg" />
                       </v-avatar>
-                      <div style="color:#4a63aa">{{ name}}</div>
-                      <span style="color:#6c757d">{{profession}}</span>
-                      <v-card-text style="color: #5d5d89;font-size: small;">{{ about}}</v-card-text>
+                      <div
+                        style="padding-top: 32px;display: flex;justify-content: space-around;color: rgb(74, 99, 170);"
+                      >
+                        <h4 style="color: #354168;">{{ name}}</h4>
+                      </div>
+                      <span style="    color: #a8abad ;">{{profession}}</span>
+                      <v-card-text style="color: #354168;;font-size: small;">{{ about}}</v-card-text>
                       <v-btn color="indigo" dark>Follow</v-btn>
                       <!-- <v-divider style="border-color: rgba(0,0,0,0.26)"></v-divider> -->
                     </div>
@@ -123,9 +145,15 @@
                       <v-divider style="border-color: rgba(0,0,0,0.26)"></v-divider>
                       <table class="table table-borderless">
                         <tbody style="color:black;">
-                          <th scope="col" style="font-size:16px">5896</th>
-                          <th scope="col" style="font-size:16px">1596</th>
-                          <th scope="col" style="font-size:16px">7896</th>
+                          <th scope="col" style="font-size:16px">
+                            <h6 style="font-size: 0.9375rem;">5896</h6>
+                          </th>
+                          <th scope="col" style="font-size:16px">
+                            <h6 style="font-size: 0.9375rem;">1596</h6>
+                          </th>
+                          <th scope="col" style="font-size:16px">
+                            <h6 style="font-size: 0.9375rem;">7896</h6>
+                          </th>
                         </tbody>
                         <tbody>
                           <td style="padding-top: 0px;">Post</td>
@@ -140,12 +168,22 @@
               </v-flex>
 
               <!-- second card -->
-              <v-flex xs12 sm12 md4>
-                <v-card class="product-card" dark color="#fff">
+              <v-flex xs12 sm12 md4 style="padding-right: 12.5px;padding-left: 12.5px;">
+                <v-card class="product-card card-body" dark color="#fff">
                   <div v-for="details in productDetails" :key="details.amount">
-                    <span class="product-graph">{{ details.name}}</span>
-                    <span class="product-text">{{details.amount}}</span>
-                    <span class="product-subheader">{{details.changes}}</span>
+                    <div>
+                      <span class="product-graph">
+                        <h5>{{ details.name}}</h5>
+                      </span>
+                      <span class="product-text">
+                        <h1>{{details.amount}}</h1>
+                      </span>
+                      <span class="product-subheader">{{details.changes}}</span>
+                    </div>
+                    <v-divider
+                      v-if="details.name=='Top Product'"
+                      style="border-color: rgba(0,0,0,0.26)"
+                    ></v-divider>
                   </div>
                   <div>
                     <productSprinkerLine></productSprinkerLine>
@@ -154,14 +192,16 @@
               </v-flex>
 
               <!-- 3rd card -->
-              <v-flex xs12 sm12 md4>
-                <v-card class="product-card" dark color="#fff">
+              <v-flex xs12 sm12 md4 style="padding-right: 12.5px;">
+                <v-card class="product-card card-body" dark color="#fff">
                   <div class="card3">
                     <div v-for="card in card3" :key="card.value">
-                      <v-card-text style="color:black">
-                        {{ card.value}}
-                        <br />
-                        <span style="color:#6c757d; font-size:10px">{{ card.name}}</span>
+                      <v-card-text style=" font-size: 1.13rem; font-weight: 600; color:#354168;">
+                        <h4>{{ card.value}}</h4>
+
+                        <span
+                          style="color: #a8abad;font-size: 80%;font-weight: 400;"
+                        >{{ card.name}}</span>
                       </v-card-text>
                     </div>
                   </div>
@@ -172,10 +212,9 @@
 
                   <div class="avarage">
                     <div v-for="card in avarage" :key="card.value">
-                      <v-card-text style="color:black">
-                        {{ card.value}}
-                        <br />
-                        <span style="color:#6c757d; font-size:10px">{{ card.name}}</span>
+                      <v-card-text style=" font-size: 1.13rem; font-weight: 600; color:#354168;">
+                      <h4>  {{ card.value}}</h4>
+                        <span  style="color: #a8abad;font-size: 80%;font-weight: 400;">{{ card.name}}</span>
                       </v-card-text>
                     </div>
                   </div>
@@ -459,7 +498,7 @@ export default {
   data() {
     return {
       fill: true,
-      name: "Marian Jhonson",
+      name: "Maria Johnson",
       profession: "Devloper",
       about:
         "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Aenean commodo ligula ligula eget dolor.Lorem",
@@ -612,6 +651,91 @@ export default {
 </script>
 
 <style>
+h4 {
+  font-size: 1.13rem !important;
+  font-weight: 600;
+}
+h1 {
+  font-size: 2.19rem;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+a,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+  text-shadow: none;
+}
+h1,
+.h1 {
+  font-size: 2.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* first card */
+
+.h4,
+h4 {
+  font-size: 1.13rem !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-shadow: none;
+  line-height: 1.2;
+  color: inherit;
+  margin-top: 0;
+}
+/* search area */
+
+button.btn-icon.v-btn.v-btn--flat.v-btn--round.theme--light {
+  background: #f9f9fc;
+}
+.card-body {
+  padding: 35px 25px !important;
+}
 .dashboard {
   background: linear-gradient(30deg, #464de4, #814eff);
   color: #fff;
@@ -805,21 +929,23 @@ button.btn.btn-labeled {
 }
 .product-graph {
   display: flex;
-  padding-left: 16px;
-  padding-top: 16px;
-  color: #424242;
+  /* padding-left: 16px; */
+  /* padding-top: 16px; */
+  color: #636363;
 }
 .product-subheader {
   display: flex;
-  padding-left: 16px;
-  font-size: 10px;
+  /* padding-left: 16px; */
   color: #40556b;
+  font-weight: 400;
+  font-size: 0.8rem;
 }
 .product-text {
   display: flex;
-  font-size: x-large;
-  padding-left: 16px;
-  color: #4b4b97;
+  font-size: 2.19rem;
+  /* padding-left: 16px; */
+  font-weight: 600;
+  color: #354168;
 }
 .user-bio {
   display: flex;
@@ -831,10 +957,18 @@ button.btn.btn-labeled {
 }
 /* product */
 .product-card {
-  height: 420px;
+  height: 480px;
+
+  /* height: auto; */
   max-height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.32) !important;
+  border: 1px solid #d5dcec;
+  border-radius: 0px;
+  /* border: 1px solid rgba(0, 0, 0, 0.32) !important; */
 }
+.div {
+  text-shadow: none;
+}
+
 /* chart card */
 .chart2 {
   height: 402px;
@@ -947,7 +1081,8 @@ button.btn.btn-labeled {
 }
 
 nav.margin1.v-toolbar.v-toolbar--extended.v-toolbar--prominent.theme--light {
-  box-shadow: none;
+  /* box-shadow: none; */
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
 }
 .theme--light.v-toolbar {
   background-color: #fff;
